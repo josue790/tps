@@ -1,0 +1,16 @@
+from datetime import datetime
+ 
+ class Coche:
+     def __init__(self, marca, modelo, años_fabricacion):
+         self.marca = marca
+         self.modelo = modelo
+         self.año_fabricacion = años_fabricacion
+     
+     def obtener_año(self):
+         año_actual = datetime.now().year
+         return año_actual - self.año_fabricacion
+ 
+ coche1 = Coche("Duster", "Iconic CVT e Iconic 4x4", 2010)
+ print(f"La Marca: {coche1.marca}")
+ print(f" El Modelo: {coche1.modelo}")
+ print(f"los años de fabricación: {coche1.obtener_año()} años")
