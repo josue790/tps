@@ -1,10 +1,8 @@
 class Rectangulo:
-     def __init__(self, longitud, anchura):
-         self.longitud = longitud
-         self.anchura = anchura
- 
-     def calcular_area(self):
-         return self.longitud * self.anchura
- 
-     def calcular_perimetro(self):
-         return 2 * (self.longitud + self.anchura)
+    def __init__(self, largo, ancho):
+        self.largo = largo
+        self.ancho = ancho
+    def area(self):
+        return self.largo * self.ancho
+    def perimetro(self):
+        return 2 * (self.largo + self.ancho)
