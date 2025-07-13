@@ -1,17 +1,8 @@
 class Circulo:
-     def __init__(self, radio):
-         self.radio = radio
-         self.diametro = radio * 2
- 
-     def calcular_area(self):
-         return math.pi * (self.radio ** 2)
- 
-     def calcular_circunferencia(self):
-         return 2 * math.pi * self.radio
- 
- mi_circulo = Circulo(4)
- 
- print("Radio:", mi_circulo.radio)
- print("Diámetro:", mi_circulo.diametro)
- print("Área:", mi_circulo.calcular_area())
- print("Circunferencia:", mi_circulo.calcular_circunferencia())
+    def __init__(self, radio):
+        self.radio = radio
+        self.diametro = radio * 2
+    def calcular_area(self):
+        return 3 * (self.radio * self.radio)
+    def calcular_circunferencia(self):
+        return 2 * 3 * self.radio
