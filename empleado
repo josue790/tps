@@ -4,48 +4,5 @@ class Empleado:
         self.edad = edad
         self.salario = salario
         self.cargo = cargo
-    def obtener_nombre(self):
-        return self.nombre
-
-    def obtener_edad(self):
-        return self.edad
-
-    def obtener_salario(self):
-        return self.salario
-
-    def obtener_cargo(self):
-        return self.cargo
-
-    def establecer_nombre(self, nombre):
-        self.nombre = nombre
-
-    def establecer_edad(self, edad):
-        self.edad = edad
-
-    def establecer_salario(self, salario):
-        self.salario = salario
-
-    def establecer_cargo(self, cargo):
-        self.cargo = cargo
-
-    def calcular_salario_anual(self):
+    def salario_anual(self):
         return self.salario * 12
-
-if __name__ == "__main__":
-    empleado = Empleado("Juan Pérez", 30, 2500, "Desarrollador")
-    
-    print(f"Nombre: {empleado.obtener_nombre()}")
-    print(f"Edad: {empleado.obtener_edad()}")
-    print(f"Cargo: {empleado.obtener_cargo()}")
-    print(f"Salario mensual: {empleado.obtener_salario()}")
-
-    salario_anual = empleado.calcular_salario_anual()
-    print(f"Salario anual: {salario_anual}")
-
-    empleado.establecer_nombre("Pedro González")
-    empleado.establecer_salario(3000)
-
-    print("\nDespués de modificar algunos datos:")
-    print(f"Nuevo nombre: {empleado.obtener_nombre()}")
-    print(f"Nuevo salario mensual: {empleado.obtener_salario()}")
-    print(f"Nuevo salario anual: {empleado.calcular_salario_anual()}")
