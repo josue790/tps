@@ -1,27 +1,21 @@
 class Banco:
-     def __init__(self, nombre, tasa_interes):
-         self.nombre = nombre
-         self.tasa_interes = tasa_interes  
- 
-     def calcular_interes(self, cantidad, años):
-       
-         tasa_decimal = self.tasa_interes / 100
-         monto_final = cantidad * ((1 + tasa_decimal) ** años)
-         interes_ganado = monto_final - cantidad
-         return interes_ganado
- 
-     def tiempo_para_duplicar(self):
-     
-         if self.tasa_interes <= 0:
-             return float('inf') 
-         return 72 / self.tasa_interes
- 
- banco = Banco("Banco Galicia arg", 129.64)
- 
- cantidad = 1000  
- años = 5
- 
- print("Nombre del banco:", banco.nombre)
- print("Tasa de interés:", banco.tasa_interes, "%")
- print("Interés ganado en", años, "años:", round(banco.calcular_interes(cantidad, años), 2))
- print("Tiempo para duplicar el dinero:", round(banco.tiempo_para_duplicar(), 2), "años")
+    def __init__(self, nombre, tasa):
+        self.nombre = nombre
+        self.tasa = tasa
+    def calcular_interes(self, cantidad, años):
+        tasa = self.tasa / 100
+        monto = cantidad
+        contador = 0
+        while contador < años:
+            monto = monto + monto * tasa
+            contador = contador + 1
+        return monto - cantidad
+    def tiempo_para_duplicar(self):
+        if self.tasa <= 0:
+            return "Nunca"
+        total = 0
+        pasos = 0
+        while total < 72:
+            total = total + self.tasa
+            pasos = pasos + 1
+        return pasos
